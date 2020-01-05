@@ -1,0 +1,27 @@
+#include <iostream>   
+#include <string>     
+using namespace std;
+
+int main() {
+	int n;
+	int minscore = 99999, maxscore = 0, score = 0;
+	string minName,num, name,maxName, minNum, maxNum;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> name >> num >> score;
+		if (maxscore < score) {
+			maxscore = score;
+			maxName = name;
+			maxNum = num;
+		}
+		if (minscore > score) {
+			minscore = score;
+			minName = name;
+			minNum = num;
+		}
+	}
+	cout << maxName << " " << maxNum << endl;
+	cout << minName << " " << minNum << endl;
+	system("pause");
+	return 0;
+}

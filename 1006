@@ -1,0 +1,32 @@
+#include <iostream>   
+#include <string>  
+#include <iostream>
+#include <vector>
+#include <algorithm>  
+using namespace std;
+
+void Cprint(int n, char s) {
+	for (int i = 0; i < n; i++) {
+		cout << s;
+	}
+}
+
+int main() {
+	string s;
+	cin >> s;
+	char B = 'B';
+	char S = 'S';
+	int a[3] = { 0,0,0 };
+	
+	for (int i = 0; i < s.length(); i++)
+		a[2-i] = s[s.length ()-1-i] - '0'; 
+	
+	Cprint(a[0], B);
+	Cprint(a[1], S);
+	int count = 1;
+	for (int i = 0; i < a[2]; i++) {
+		cout << count;
+		count++;
+	}
+	return 0;
+}
